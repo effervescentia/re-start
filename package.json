@@ -1,0 +1,58 @@
+{
+  "name": "re-start",
+  "version": "1.0.0",
+  "description": "Start preset with reconfigurable tasks",
+  "keywords": [
+    "start",
+    "start-preset"
+  ],
+  "homepage": "https://github.com/effervescentia/re-start",
+  "repository": "effervescentia/re-start",
+  "author": "Ben Teichman <ben.l.teichman@gmail.com> (https://github.com/effervescentia)",
+  "files": [
+    "build/"
+  ],
+  "main": "build/index.js",
+  "dependencies": {
+    "start": "^5.0.0",
+    "start-babel": "^3.0.0",
+    "start-clean": "^2.0.0",
+    "start-codecov": "^2.0.0",
+    "start-env": "^3.0.0",
+    "start-files": "^2.0.0",
+    "start-istanbul": "^3.0.0",
+    "start-mocha": "^3.0.0",
+    "start-pretty-reporter": "^0.3.0",
+    "start-read": "^0.3.0",
+    "start-standard": "^1.0.0",
+    "start-watch": "^2.0.0",
+    "start-write": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-start": "^0.1.0",
+    "condition-circle": "^1.5.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "husky": "^0.12.0",
+    "semantic-release": "^6.3.2",
+    "semistandard": "^9.2.1",
+    "start-babel-cli": "^4.0.1"
+  },
+  "scripts": {
+    "start": "start-runner --file lib/",
+    "prepush": "yarn start lint",
+    "prepublish": "yarn start build",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
