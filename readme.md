@@ -43,8 +43,8 @@ See [documentation](https://github.com/start-runner/start#readme) and [source ta
 - `instrumentOpts` - opts passed to the instrument task. *default*: `{ esModules: true }`
 - `report` - the coverage reporting task. *default*: `start-istanbul.report`
 - `reportOpts` - opts passed to the reporting task. *default*: `[ 'lcovonly', 'html', 'text-summary' ]`
-- `coverage` - the task to send coverage reports. *default*: `start-codecov`
-- `coverageOpts` - opts passed to the coverage sending task
+- `exportCoverage` - the task to export coverage reports. *default*: `start-codecov`
+- `exportCoverageOpts` - opts passed to the coverage export task
 - `srcFiles` - source file glob or glob array. *default*: `'src/**/*.js'`
 - `testFiles` - test file glob or glob array. *default*: `'test/**/*.js'`
 - `reportDir` - directory for coverage reports. *default*: `'coverage/'`
@@ -80,10 +80,10 @@ or put the configuration in your `package.json`
 }
 ```
 
-### Hijack a task
+### Hijack a command
 
-Want to override a single phase without having to repeat the existing workflow?
-Re-start tasks target the references in the exported module, so you can simply
+Want to override a single command without having to repeat existing depending workflows?
+Re-start commands target the references in the exported module, so you can simply
 replace the whole `lint` phase with it's inherent ties to `ci` and `prepush`
 with little more than the following:
 
@@ -93,14 +93,25 @@ import env from 'start-env';
 import files from 'start-files';
 import eslint from 'start-eslint';
 
-const retasked = module.exports = restart({ testOpts: tapSpec, test: tape });
+const commands = module.exports = restart();
 
-retasked.lint = () => retasked.start(
+commands.lint = () => commands.start(
   env('NODE_ENV', 'lint'),
   files('test/**/*.js'),
   eslint()
 );
 ```
+
+### Available tasks
+
+- *`build`* - `[ENV: production]` __in(__`srcFiles`__) -> `compile()` -> out(__`outDir`__)__
+- *`dev`* - `[ENV: development]` __in(__`srcFiles`__) -> watch(`compile()`) -> out(__`outDir`__)__
+- *`lint`* - `[ENV: lint]` __in(__`srcFiles + testFiles`__) -> lint()__
+- *`test`* - `[ENV: test]` __in(__`testFiles`__) -> `test()`__
+- *`tdd`* - `[ENV: test]` __in(__`test`__) -> watch(__*`test`*__)__
+- *`coverage`* - `[ENV: test]` __in(__`srcFiles`__) -> `instrument()` -> __*`test`*__ -> `report()`__
+- *`ci`* - `[ENV: test]` *`lint`*__ -> __*`coverage`*__ -> in(__`coverageReport`__) -> `exportCoverage()`__
+- *`prepush`* -> `[ENV: test]` *`lint`*__->__*`coverage`*
 
 Available commands: same commands as `start-start-preset`.
 
