@@ -109,9 +109,9 @@ commands.lint = () => commands.start(
 - *`lint`* - `[ENV: lint]` __in(__`srcFiles + testFiles`__) -> lint()__
 - *`test`* - `[ENV: test]` __in(__`testFiles`__) -> `test()`__
 - *`tdd`* - `[ENV: test]` __in(__`test`__) -> watch(__*`test`*__)__
-- *`coverage`* - `[ENV: test]` __in(__`srcFiles`__) -> `instrument()` -> __*`test`*__ -> `report()`__
-- *`ci`* - `[ENV: test]` *`lint`*__ -> __*`coverage`*__ -> in(__`coverageReport`__) -> `exportCoverage()`__
-- *`prepush`* -> `[ENV: test]` *`lint`*__->__*`coverage`*
+- *`coverage`* - `[ENV: test]` __in(__`srcFiles`__) -> `instrument()` ->__ *`test`* __-> `report()`__
+- *`ci`* - `[ENV: test]` *`lint`* __->__ *`coverage`* __-> in(__`coverageReport`__) -> `exportCoverage()`__
+- *`prepush`* -> `[ENV: test]` *`lint`* __->__ *`coverage`*
 
 Available commands: same commands as `start-start-preset`.
 
