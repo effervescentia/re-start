@@ -1,5 +1,7 @@
 # re-start
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/effervescentia/re-start.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/re-start.svg?style=flat-square)](https://www.npmjs.com/package/re-start)
 [![linux build](https://img.shields.io/circleci/project/github/effervescentia/re-start/master.svg?label=linux&style=flat-square)](https://circleci.com/gh/effervescentia/re-start)
 [![windows build](https://img.shields.io/appveyor/ci/effervescentia/re-start/master.svg?label=windows&style=flat-square)](https://ci.appveyor.com/project/effervescentia/re-start)
