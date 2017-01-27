@@ -45,7 +45,7 @@ See [documentation](https://github.com/start-runner/start#readme) and [source ta
 - `reportOpts` - opts passed to the reporting task. *default*: `[ 'lcovonly', 'html', 'text-summary' ]`
 - `exportCoverage` - the task to export coverage reports. *default*: `start-codecov`
 - `exportCoverageOpts` - opts passed to the coverage export task
-- `srcFiles` - source file glob or glob array. *default*: `'src/**/*.js'`
+- `srcFiles` - source file glob or glob array. *default*: `'lib/**/*.js'`
 - `testFiles` - test file glob or glob array. *default*: `'test/**/*.js'`
 - `reportDir` - directory for coverage reports. *default*: `'coverage/'`
 - `outDir` - directory for compiled code. *default*: `'build/'`
