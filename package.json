@@ -14,6 +14,7 @@
   ],
   "main": "build/index.js",
   "dependencies": {
+    "pkginfo": "^0.4.0",
     "start": "^5.0.0",
     "start-babel": "^3.0.0",
     "start-clean": "^2.0.0",
@@ -51,6 +52,9 @@
   },
   "license": "MIT",
   "config": {
+    "restart": {
+      "lintOpts": "semistandard"
+    },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
