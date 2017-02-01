@@ -32,6 +32,7 @@ See [documentation](https://github.com/start-runner/start#readme) and [source ta
 ### Configuration
 
 - `reporter` - the reporter to use. *default*: `start-pretty-reporter`
+
 #### tasks
 - `lint` - the lint task. *default*: `start-standard`
 - `compile` - the compile task. *default*: `start-babel`
@@ -39,6 +40,7 @@ See [documentation](https://github.com/start-runner/start#readme) and [source ta
 - `instrument` - the coverage instrumentation task. *default*: `start-istanbul.instrument`
 - `report` - the coverage reporting task. *default*: `start-istanbul.report`
 - `exportCoverage` - the task to export coverage reports. *default*: `start-codecov`
+
 #### options
 - `reporterOpts` - opts passed to the reporter
 - `lintOpts` - opts passed to the lint task
@@ -47,6 +49,7 @@ See [documentation](https://github.com/start-runner/start#readme) and [source ta
 - `instrumentOpts` - opts passed to the instrument task. *default*: `{ esModules: true }`
 - `reportOpts` - opts passed to the reporting task. *default*: `[ 'lcovonly', 'html', 'text-summary' ]`
 - `exportCoverageOpts` - opts passed to the coverage export task
+
 #### files
 - `srcFiles` - source file glob or glob array. *default*: `'lib/**/*.js'`
 - `testFiles` - test file glob or glob array. *default*: `'test/**/*.js'`
