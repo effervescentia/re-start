@@ -47,6 +47,10 @@ See [documentation](https://github.com/start-runner/start#readme) and [source ta
 - `exportCoverageOpts` - opts passed to the coverage export task
 - `srcFiles` - source file glob or glob array. *default*: `'lib/**/*.js'`
 - `testFiles` - test file glob or glob array. *default*: `'test/**/*.js'`
+- `lintFiles` - files to read for `lint` command. *default*: `[...srcFiles, ...testFiles]`
+- `coverageFiles` - files to instrument with `instrument` task. *default*: `srcFiles`
+- `watchFiles` - files to watch for `dev` command. *default*: `srcFiles`
+- `testWatchFiles` - files to watch for `tdd` command. *default*: `[...srcFiles, ...testFiles]`
 - `reportDir` - directory for coverage reports. *default*: `'coverage/'`
 - `outDir` - directory for compiled code. *default*: `'build/'`
 - `coverageReport` - coverage report file. *default*: `'coverage/lcov.info'`
