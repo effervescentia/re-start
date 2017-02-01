@@ -32,19 +32,22 @@ See [documentation](https://github.com/start-runner/start#readme) and [source ta
 ### Configuration
 
 - `reporter` - the reporter to use. *default*: `start-pretty-reporter`
-- `reporterOpts` - opts passed to the reporter
+#### tasks
 - `lint` - the lint task. *default*: `start-standard`
-- `lintOpts` - opts passed to the lint task
 - `compile` - the compile task. *default*: `start-babel`
-- `compileOpts` - opts passed to the compile task
 - `test` - the test test. *default*: `start-mocha`
-- `testOpts` - opts passed to the test task
 - `instrument` - the coverage instrumentation task. *default*: `start-istanbul.instrument`
-- `instrumentOpts` - opts passed to the instrument task. *default*: `{ esModules: true }`
 - `report` - the coverage reporting task. *default*: `start-istanbul.report`
-- `reportOpts` - opts passed to the reporting task. *default*: `[ 'lcovonly', 'html', 'text-summary' ]`
 - `exportCoverage` - the task to export coverage reports. *default*: `start-codecov`
+#### options
+- `reporterOpts` - opts passed to the reporter
+- `lintOpts` - opts passed to the lint task
+- `compileOpts` - opts passed to the compile task
+- `testOpts` - opts passed to the test task
+- `instrumentOpts` - opts passed to the instrument task. *default*: `{ esModules: true }`
+- `reportOpts` - opts passed to the reporting task. *default*: `[ 'lcovonly', 'html', 'text-summary' ]`
 - `exportCoverageOpts` - opts passed to the coverage export task
+#### files
 - `srcFiles` - source file glob or glob array. *default*: `'lib/**/*.js'`
 - `testFiles` - test file glob or glob array. *default*: `'test/**/*.js'`
 - `lintFiles` - files to read for `lint` command. *default*: `[...srcFiles, ...testFiles]`
