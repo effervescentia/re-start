@@ -26,6 +26,7 @@
     "start-mocha": "^3.0.0",
     "start-pretty-reporter": "^0.3.0",
     "start-read": "^0.3.0",
+    "start-typescript": "^1.0.2",
     "start-watch": "^2.0.0",
     "start-write": "^2.0.0"
   },
@@ -53,6 +54,8 @@
   "license": "MIT",
   "config": {
     "restart": {
+      "srcFiles": "lib/**/*.js",
+      "outDir": "dist/",
       "lintOpts": "semistandard"
     },
     "commitizen": {
