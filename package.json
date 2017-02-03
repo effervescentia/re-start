@@ -55,7 +55,7 @@
   "config": {
     "restart": {
       "srcFiles": "lib/**/*.js",
-      "outDir": "dist/",
+      "outDir": "build/",
       "lintOpts": "semistandard"
     },
     "commitizen": {
