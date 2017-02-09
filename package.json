@@ -20,12 +20,14 @@
     "start-clean": "^2.0.0",
     "start-codecov": "^2.0.0",
     "start-env": "^3.0.0",
+    "start-eslint": "^3.0.1",
     "start-files": "^2.0.0",
     "start-istanbul": "^3.0.0",
     "start-mocha": "^3.0.0",
     "start-pretty-reporter": "^0.3.0",
     "start-read": "^0.3.0",
-    "start-standard": "^1.0.0",
+    "start-split": "^1.0.0",
+    "start-typescript": "^1.0.3",
     "start-watch": "^2.0.0",
     "start-write": "^2.0.0"
   },
@@ -33,6 +35,7 @@
     "babel-preset-start": "^0.1.0",
     "condition-circle": "^1.5.0",
     "cz-conventional-changelog": "^1.2.0",
+    "eslint-config-tough": "^0.4.0",
     "husky": "^0.12.0",
     "semantic-release": "^6.3.2",
     "semistandard": "^9.2.1",
@@ -53,7 +56,8 @@
   "license": "MIT",
   "config": {
     "restart": {
-      "lintOpts": "semistandard"
+      "srcFiles": "lib/**/*.js",
+      "outDir": "build/"
     },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
