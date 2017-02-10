@@ -34,7 +34,8 @@
   "devDependencies": {
     "eslint-config-tough": "^0.4.0",
     "semantic-release": "^6.3.2",
-    "start-babel-cli": "^4.0.1"
+    "start-babel-cli": "^4.0.1",
+    "tkstr-devtools": "^1.0.0"
   },
   "scripts": {
     "start": "start-runner --file lib/",
