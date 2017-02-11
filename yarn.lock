@@ -3071,9 +3071,9 @@ start-read@^0.3.0:
     graceful-fs "^4.1.5"
     makethen "^0.1.0"
 
-start-release@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/start-release/-/start-release-1.3.0.tgz#2172b71b9258cd7de628e9f022c5d03340a03971"
+start-release@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/start-release/-/start-release-1.3.1.tgz#b57c52c368f03f102d8b1aa11da9f7a6598580d1"
   dependencies:
     execa "^0.6.0"
     nerf-dart "^1.0.0"
