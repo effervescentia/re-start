@@ -1,3 +1,4 @@
+root: true
 extends:
   - tough/config/common
   - tough/config/node

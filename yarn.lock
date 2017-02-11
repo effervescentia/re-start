@@ -944,10 +944,6 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-semistandard@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-semistandard/-/eslint-config-semistandard-7.0.0.tgz#f803493f56a5172f7f59c35ae648360b41f2ff71"
-
 eslint-config-tough@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/eslint-config-tough/-/eslint-config-tough-0.4.0.tgz#85c955dc4b553edb44e7d216ce146814b71ac52f"
@@ -1028,6 +1024,45 @@ eslint-plugin-react@~6.8.0:
     doctrine "^1.2.2"
     jsx-ast-utils "^1.3.4"
 
+eslint@^3.15.0:
+  version "3.15.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.15.0.tgz#bdcc6a6c5ffe08160e7b93c066695362a91e30f2"
+  dependencies:
+    babel-code-frame "^6.16.0"
+    chalk "^1.1.3"
+    concat-stream "^1.4.6"
+    debug "^2.1.1"
+    doctrine "^1.2.2"
+    escope "^3.6.0"
+    espree "^3.4.0"
+    estraverse "^4.2.0"
+    esutils "^2.0.2"
+    file-entry-cache "^2.0.0"
+    glob "^7.0.3"
+    globals "^9.14.0"
+    ignore "^3.2.0"
+    imurmurhash "^0.1.4"
+    inquirer "^0.12.0"
+    is-my-json-valid "^2.10.0"
+    is-resolvable "^1.0.0"
+    js-yaml "^3.5.1"
+    json-stable-stringify "^1.0.0"
+    levn "^0.3.0"
+    lodash "^4.0.0"
+    mkdirp "^0.5.0"
+    natural-compare "^1.4.0"
+    optionator "^0.8.2"
+    path-is-inside "^1.0.1"
+    pluralize "^1.2.1"
+    progress "^1.1.8"
+    require-uncached "^1.0.2"
+    shelljs "^0.7.5"
+    strip-bom "^3.0.0"
+    strip-json-comments "~2.0.1"
+    table "^3.7.8"
+    text-table "~0.2.0"
+    user-home "^2.0.0"
+
 eslint@^3.3.0:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.14.1.tgz#8a62175f2255109494747a1b25128d97b8eb3d97"
@@ -1067,7 +1102,7 @@ eslint@^3.3.0:
     text-table "~0.2.0"
     user-home "^2.0.0"
 
-espree@^3.3.1:
+espree@^3.3.1, espree@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/espree/-/espree-3.4.0.tgz#41656fa5628e042878025ef467e78f125cb86e1d"
   dependencies:
@@ -2991,19 +3026,19 @@ start-simple-cli@^4.0.0:
     commander "^2.9.0"
     resolve-cwd "^1.0.0"
 
-start-split@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/start-split/-/start-split-1.0.0.tgz#43206cea6314e453410707cecd792e6169670613"
+start-split@^1.0.0, start-split@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/start-split/-/start-split-1.0.1.tgz#dec7da8171c4d302106e04302f22ede407086667"
   dependencies:
+    eslint "^3.15.0"
     start "^5.1.0"
     start-concurrent "^0.1.0"
     start-input-connector "^0.2.0"
 
-start-typescript@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/start-typescript/-/start-typescript-1.1.0.tgz#b82be864d531f2c2c3d3696b14bf32f6bc35b78f"
+start-typescript@^1.1.0, start-typescript@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/start-typescript/-/start-typescript-1.1.3.tgz#7fabfa6005ffcaa758b3d0207fc5e9f08ce0c4ad"
   dependencies:
-    eslint-config-semistandard "^7.0.0"
     tsconfig "^5.0.3"
     typescript "~2.1.5"
     typescript-compiler "^1.4.1-2"
