@@ -3,3 +3,5 @@ extends:
   - tough/config/common
   - tough/config/node
   - tough/config/esnext
+rules:
+  array-bracket-spacing: 0

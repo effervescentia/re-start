@@ -26,6 +26,7 @@
     "start-mocha": "^3.0.0",
     "start-pretty-reporter": "^0.3.0",
     "start-read": "^0.3.0",
+    "start-release": "^1.3.0",
     "start-split": "^1.0.1",
     "start-typescript": "^1.1.3",
     "start-watch": "^2.0.0",
@@ -37,8 +38,11 @@
     "start-babel-cli": "^4.0.1",
     "tkstr-devtools": "^1.0.0"
   },
+  "peerDependencies": {
+    "start": "^5.0.0"
+  },
   "scripts": {
-    "start": "start-runner --file lib/",
+    "start": "start-runner -f lib/",
     "prepush": "yarn start lint",
     "prepublish": "yarn start build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -54,7 +58,7 @@
     "restart": {
       "srcFiles": "lib/**/*.js",
       "lintFiles": [
-        "src/**/*.js",
+        "lib/**/*.js",
         "test/**/*.js",
         "presets/*.js"
       ],
