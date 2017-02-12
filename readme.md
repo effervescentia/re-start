@@ -147,8 +147,8 @@ commands.lint = () => commands.start(
 
 ### Available commands
 
--   *`build`* - `[ENV: production]` __in(__`srcFiles`__) -> `compile()` -> out(__`outDir`__)__
--   *`dev`* - `[ENV: development]` __in(__`watchFiles`__or__`srcFiles`__) -> watch(`compile()`) -> out(__`outDir`__)__
+-   *`build`* \* - `[ENV: production]` __in(__`srcFiles`__) -> `compile()` -> out(__`outDir`__)__
+-   *`dev`* \* - `[ENV: development]` __in(__`watchFiles`__or__`srcFiles`__) -> watch(`compile()`) -> out(__`outDir`__)__
 -   *`lint`* - `[ENV: test]` __in(__`lintFiles`__or__`srcFiles + testFiles`__) -> lint()__
 -   *`test`* - `[ENV: test]` __in(__`testFiles`__) -> `test()`__
 -   *`tdd`* - `[ENV: test]` __in(__`testWatchFiles`__or__`testFiles`__) -> watch(__*`test`*__)__
@@ -156,6 +156,8 @@ commands.lint = () => commands.start(
 -   *`ci`* - `[ENV: test]` *`lint`* __->__ *`coverage`* __-> in(__`coverageReport`__) -> `exportCoverage()`__
 -   *`prepush`* -> `[ENV: test]` *`lint`* __->__ *`coverage`*
 -   *`release`* -> `[ENV: production]` `release()`
+
+\* not available with the `es5` preset
 
 ### Extend
 
