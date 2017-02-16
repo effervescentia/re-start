@@ -84,15 +84,23 @@ Example:
 #### files
 -   `srcFiles` - source file glob or glob array. *default*: `'src/**/*.js'`
 -   `testFiles` - test file glob or glob array. *default*: `'test/**/*.js'`
--   `scratchTestFiles` - compiled test file glob or glob array (typescript). *default*: `'.scratch/test/index.js'`
 -   `lintFiles` - files to read for `lint` command. *default*: `[...srcFiles, ...testFiles]`
 -   `coverageFiles` - files to instrument with `instrument` task. *default*: `srcFiles`
 -   `watchFiles` - files to watch for `dev` command. *default*: `srcFiles`
 -   `testWatchFiles` - files to watch for `tdd` command. *default*: `[...srcFiles, ...testFiles]`
 -   `reportDir` - directory for coverage reports. *default*: `'coverage/'`
--   `outDir` - directory for compiled code. *default*: `'build/'`
--   `scratchDir` - directory for compiled code for test (typescript). *default*: `'.scratch/'`
+-   `outDir` - directory for compiled code. *default*: `'dist/'`
 -   `coverageReport` - coverage report file. *default*: `'coverage/lcov.info'`
+
+#### files (typescript-specific)
+-   `srcFiles` - source file glob or glob array. *default*: `'src/index.ts'`
+-   `testFiles` - test file glob or glob array. *default*: `'test/**/*.ts'`
+-   `scratchTestFiles` - compiled test file glob or glob array. *default*: `'.scratch/test/**/*.js'`
+-   `lintFiles` - files to read for `lint` command. *default*: `['src/**/*.ts', 'test/**/*.ts']`
+-   `coverageFiles` - files to instrument with `instrument` task. *default*: `'.scratch/src/**/*.js'`
+-   `watchFiles` - files to watch for `dev` command. *default*: `'src/**/*.ts'`
+-   `testWatchFiles` - files to watch for `tdd` command. *default*: `['src/**/*.ts', 'test/**/*.ts']`
+-   `scratchDir` - directory for compiled code for test. *default*: `'.scratch/'`
 
 
 ### Customized
