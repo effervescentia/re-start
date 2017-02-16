@@ -30,12 +30,12 @@
     "start-split": "^1.0.3",
     "start-typescript": "^1.1.4",
     "start-watch": "^2.0.0",
-    "start-write": "^2.0.0"
+    "start-write": "2.0.0"
   },
   "devDependencies": {
     "eslint-config-tough": "^0.4.0",
     "start-babel-cli": "^4.0.1",
-    "tkstr-devtools": "^1.2.1"
+    "tkstr-devtools": "^1.2.2"
   },
   "peerDependencies": {
     "start": "^5.0.0"
