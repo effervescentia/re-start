@@ -10,10 +10,10 @@
   "repository": "effervescentia/re-start",
   "author": "Ben Teichman <ben.l.teichman@gmail.com> (https://github.com/effervescentia)",
   "files": [
-    "build/",
+    "dist/",
     "presets/"
   ],
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "start": "^5.0.0",
     "start-babel": "^3.0.0",
@@ -33,6 +33,8 @@
     "start-write": "^2.0.2"
   },
   "devDependencies": {
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0",
     "eslint-config-tough": "^0.4.0",
     "start-babel-cli": "^4.0.1",
     "tkstr-devtools": "^1.2.2"
@@ -41,7 +43,7 @@
     "start": "^5.0.0"
   },
   "scripts": {
-    "start": "start-runner -f lib/",
+    "start": "start-runner -f src/",
     "prepush": "yarn start lint",
     "prepublish": "yarn start build"
   },
@@ -49,18 +51,16 @@
     "verifyConditions": "condition-circle"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=4"
   },
   "license": "MIT",
   "config": {
     "restart": {
-      "srcFiles": "lib/**/*.js",
       "lintFiles": [
-        "lib/**/*.js",
+        "src/**/*.js",
         "test/**/*.js",
         "presets/*.js"
-      ],
-      "outDir": "build/"
+      ]
     },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
