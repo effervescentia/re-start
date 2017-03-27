@@ -563,7 +563,7 @@ babel-plugin-transform-es2015-modules-amd@^6.24.0:
     babel-runtime "^6.22.0"
     babel-template "^6.22.0"
 
-babel-plugin-transform-es2015-modules-commonjs@^6.24.0:
+babel-plugin-transform-es2015-modules-commonjs@^6.24.0, babel-plugin-transform-es2015-modules-commonjs@^6.7.4:
   version "6.24.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-modules-commonjs/-/babel-plugin-transform-es2015-modules-commonjs-6.24.0.tgz#e921aefb72c2cc26cb03d107626156413222134f"
   dependencies:
@@ -571,15 +571,6 @@ babel-plugin-transform-es2015-modules-commonjs@^6.24.0:
     babel-runtime "^6.22.0"
     babel-template "^6.23.0"
     babel-types "^6.23.0"
-
-babel-plugin-transform-es2015-modules-commonjs@^6.7.4:
-  version "6.22.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-modules-commonjs/-/babel-plugin-transform-es2015-modules-commonjs-6.22.0.tgz#6ca04e22b8e214fb50169730657e7a07dc941145"
-  dependencies:
-    babel-plugin-transform-strict-mode "^6.22.0"
-    babel-runtime "^6.22.0"
-    babel-template "^6.22.0"
-    babel-types "^6.22.0"
 
 babel-plugin-transform-es2015-modules-systemjs@^6.22.0:
   version "6.23.0"
@@ -3355,9 +3346,18 @@ start-read@^0.3.0:
     graceful-fs "^4.1.5"
     makethen "^0.1.0"
 
-start-release@^1.3.6, start-release@^1.3.7:
+start-release@^1.3.6:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/start-release/-/start-release-1.3.7.tgz#f24a672936ddad392995811f0f921bdcd34ad56b"
+  dependencies:
+    nerf-dart "^1.0.0"
+    normalize-package-data "^2.3.6"
+    npmconf "^2.1.2"
+    semantic-release "^6.3.2"
+
+start-release@^1.3.8:
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/start-release/-/start-release-1.3.8.tgz#41c35858298127fb3132e9e229181702e442dde5"
   dependencies:
     nerf-dart "^1.0.0"
     normalize-package-data "^2.3.6"
@@ -3371,7 +3371,7 @@ start-simple-cli@^4.0.0:
     commander "^2.9.0"
     resolve-cwd "^1.0.0"
 
-start-split@^1.0.3, start-split@^1.0.4:
+start-split@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/start-split/-/start-split-1.0.4.tgz#4615d592b9ad4d52103d27ff85f44b9e0e6cdd44"
   dependencies:
@@ -3379,9 +3379,25 @@ start-split@^1.0.3, start-split@^1.0.4:
     start-concurrent "^0.1.0"
     start-input-connector "^0.2.0"
 
-start-typescript@^1.1.4, start-typescript@^1.2.2:
+start-split@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/start-split/-/start-split-1.0.5.tgz#43e8dfa48041a951429422317927fae038019ff4"
+  dependencies:
+    start "^5.1.0"
+    start-concurrent "^0.1.0"
+    start-input-connector "^0.2.0"
+
+start-typescript@^1.1.4:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/start-typescript/-/start-typescript-1.2.2.tgz#1c5a186feab735ab5eb691f7a6e9817ea1b197d9"
+  dependencies:
+    tsconfig "^6.0.0"
+    typescript "^2.2.1"
+    typescript-compiler "^1.4.1-2"
+
+start-typescript@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/start-typescript/-/start-typescript-1.2.3.tgz#e652a00b6c42cfbe0e793eb64322be2164e22b0e"
   dependencies:
     tsconfig "^6.0.0"
     typescript "^2.2.1"
