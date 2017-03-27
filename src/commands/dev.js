@@ -9,8 +9,7 @@ export default (commands, opts) => () => commands.start(
   DEV_ENV,
   files(opts.outDir),
   clean(),
-  files(opts.watchFiles || opts.srcFiles),
-  watch((file) => commands.start(
+  watch(opts.watchFiles || opts.srcFiles)((file) => commands.start(
     files(file),
     read(),
     opts.compile(opts.compileOpts),

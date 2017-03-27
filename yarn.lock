@@ -3346,18 +3346,9 @@ start-read@^0.3.0:
     graceful-fs "^4.1.5"
     makethen "^0.1.0"
 
-start-release@^1.3.6:
-  version "1.3.7"
-  resolved "https://registry.yarnpkg.com/start-release/-/start-release-1.3.7.tgz#f24a672936ddad392995811f0f921bdcd34ad56b"
-  dependencies:
-    nerf-dart "^1.0.0"
-    normalize-package-data "^2.3.6"
-    npmconf "^2.1.2"
-    semantic-release "^6.3.2"
-
-start-release@^1.3.8:
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/start-release/-/start-release-1.3.8.tgz#41c35858298127fb3132e9e229181702e442dde5"
+start-release@^1.3.6, start-release@^1.3.9:
+  version "1.3.9"
+  resolved "https://registry.yarnpkg.com/start-release/-/start-release-1.3.9.tgz#884b511dcab70ed12d7811f4f7dc0c1ce4b967b4"
   dependencies:
     nerf-dart "^1.0.0"
     normalize-package-data "^2.3.6"
@@ -3372,14 +3363,6 @@ start-simple-cli@^4.0.0:
     resolve-cwd "^1.0.0"
 
 start-split@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/start-split/-/start-split-1.0.4.tgz#4615d592b9ad4d52103d27ff85f44b9e0e6cdd44"
-  dependencies:
-    start "^5.1.0"
-    start-concurrent "^0.1.0"
-    start-input-connector "^0.2.0"
-
-start-split@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/start-split/-/start-split-1.0.5.tgz#43e8dfa48041a951429422317927fae038019ff4"
   dependencies:
@@ -3387,17 +3370,17 @@ start-split@^1.0.5:
     start-concurrent "^0.1.0"
     start-input-connector "^0.2.0"
 
-start-typescript@^1.1.4:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/start-typescript/-/start-typescript-1.2.2.tgz#1c5a186feab735ab5eb691f7a6e9817ea1b197d9"
+start-split@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/start-split/-/start-split-1.0.7.tgz#263354eba7c4002bee8e0866d7aa626344530df2"
   dependencies:
-    tsconfig "^6.0.0"
-    typescript "^2.2.1"
-    typescript-compiler "^1.4.1-2"
+    start "^5.1.0"
+    start-concurrent "^0.1.0"
+    start-input-connector "^0.2.0"
 
-start-typescript@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/start-typescript/-/start-typescript-1.2.3.tgz#e652a00b6c42cfbe0e793eb64322be2164e22b0e"
+start-typescript@^1.1.4, start-typescript@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/start-typescript/-/start-typescript-1.2.4.tgz#f28166f91e28180fecbbeb4d91e3d2f3ed075713"
   dependencies:
     tsconfig "^6.0.0"
     typescript "^2.2.1"
