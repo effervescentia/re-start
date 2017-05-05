@@ -1,4 +1,5 @@
 import build from './commands/build';
+import bundle from './commands/bundle';
 import testBuild from './commands/test-build';
 import dev from './commands/dev';
 import lint, { tslint } from './commands/lint';
@@ -16,7 +17,11 @@ export const ES5 = {
   ci,
   tdd,
   prepush,
-  release
+  release,
+  bundle: bundle('development'),
+  'bundle:watch': bundle('development', true),
+  'bundle:prod': bundle('production'),
+  'bundle:watch:prod': bundle('production', true)
 };
 
 export const ES6 = {

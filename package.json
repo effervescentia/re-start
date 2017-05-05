@@ -30,6 +30,7 @@
     "start-split": "^1.0.7",
     "start-typescript": "^1.2.4",
     "start-watch": "^3.0.0",
+    "start-webpack": "^0.2.0",
     "start-write": "^2.0.2"
   },
   "devDependencies": {
