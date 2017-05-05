@@ -35,16 +35,19 @@ See [documentation](https://github.com/start-runner/start#readme) and [source ta
 #### Included Presets
 
 -   `typescript`:
+    -   `bundle` - `start-webpack`
     -   `compile` - `start-typescript`
     -   `test` - `start-mocha`
     -   `instrument` & `report` - `start-istanbul`
     -   `lint` - *currently unsupported*
 -   `es6`:
+    -   `bundle` - `start-webpack`
     -   `compile` - `babel`
     -   `test` - `start-mocha`
     -   `instrument` & `report` - `start-istanbul`
     -   `lint` - `eslint`
 -   `es5`:
+    -   `bundle` - `start-webpack`
     -   `test` - `start-mocha`
     -   `instrument` & `report` - `start-istanbul`
     -   `lint` - `eslint`
@@ -64,6 +67,7 @@ Example:
 
 #### tasks
 -   `lint` - the lint task. *default*: `start-eslint`
+-   `bundle` - the bundle task. *default*: `start-webpack`
 -   `compile` - the compile task. *default*: `start-babel`
 -   `test` - the test test. *default*: `start-mocha`
 -   `instrument` - the coverage instrumentation task. *default*: `start-istanbul.instrument`
@@ -90,6 +94,7 @@ Example:
 -   `testWatchFiles` - files to watch for `tdd` command. *default*: `[...srcFiles, ...testFiles]`
 -   `reportDir` - directory for coverage reports. *default*: `'coverage/'`
 -   `outDir` - directory for compiled code. *default*: `'dist/'`
+-   `bundleDir` - directory for bundled code. *default*: `'bundle/'`
 -   `coverageReport` - coverage report file. *default*: `'coverage/lcov.info'`
 
 #### files (typescript-specific)
@@ -157,6 +162,10 @@ commands.lint = () => commands.start(
 
 -   *`build`* \* - `[ENV: production]` __in(__`srcFiles`__) -> `compile()` -> out(__`outDir`__)__
 -   *`dev`* \* - `[ENV: development]` __in(__`watchFiles`__or__`srcFiles`__) -> watch(`compile()`) -> out(__`outDir`__)__
+-   *`bundle`* - `[ENV: development]` __in(__`srcFiles`__) -> `bundle()` -> out(__`bundleDir`__)__
+-   *`bundle:prod`* - `[ENV: production]` __in(__`srcFiles`__) -> `bundle()` -> out(__`bundleDir`__)__
+-   *`bundle:watch`* - `[ENV: development]` __in(__`srcFiles`__) -> watch(__*`bundle()`*__)__
+-   *`bundle:watch:prod`* - `[ENV: production]` __in(__`srcFiles`__) -> watch(__*`bundle()`*__)__
 -   *`lint`* - `[ENV: test]` __in(__`lintFiles`__or__`srcFiles + testFiles`__) -> lint()__
 -   *`test`* - `[ENV: test]` __in(__`testFiles`__) -> `test()`__
 -   *`tdd`* - `[ENV: test]` __in(__`testWatchFiles`__or__`testFiles`__) -> watch(__*`test`*__)__

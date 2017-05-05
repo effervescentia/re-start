@@ -3,9 +3,9 @@ import clean from 'start-clean';
 import env from 'start-env';
 import files from 'start-files';
 import watch from 'start-watch';
-import webpack from 'start-webpack';
 
-export const runWebpack = () => webpack(require(path.resolve(process.cwd(), 'webpack.config.js')));
+// eslint-disable-next-line max-len
+export const runWebpack = ({ bundle }) => bundle(require(path.resolve(process.cwd(), 'webpack.config.js')));
 
 export default (environment, watchFiles = false) => (commands, opts) => () =>
   commands.start(
@@ -13,5 +13,7 @@ export default (environment, watchFiles = false) => (commands, opts) => () =>
     files(opts.bundleDir),
     clean(),
     // eslint-disable-next-line no-ternary,max-len
-    watchFiles ? watch(opts.bundleWatchFiles || opts.srcFiles)(() => commands.start(runWebpack())) : runWebpack()
+    watchFiles ?
+      watch(opts.bundleWatchFiles || opts.srcFiles)(() => commands.start(runWebpack(opts))) :
+      runWebpack(opts)
   );
