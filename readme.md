@@ -160,8 +160,9 @@ commands.lint = () => commands.start(
 
 ### Available commands
 
--   *`build`* \* - `[ENV: production]` __in(__`srcFiles`__) -> `compile()` -> out(__`outDir`__)__
--   *`dev`* \* - `[ENV: development]` __in(__`watchFiles`__or__`srcFiles`__) -> watch(`compile()`) -> out(__`outDir`__)__
+-   *`build`* \* - `[ENV: production]` __in(__`srcFiles`__) -> `compile()` -> out(__`outDir`__)__ -> *`postBuild()`*
+-   *`postBuild`* \* - *no-op by default*
+-   *`dev`* \* - `[ENV: development]` __in(__`watchFiles`__or__`srcFiles`__) -> watch(`compile()`__ -> *`postBuild()`*__) -> out(__`outDir`__)__
 -   *`bundle`* - `[ENV: development]` __in(__`srcFiles`__) -> `bundle()` -> out(__`bundleDir`__)__
 -   *`bundle:prod`* - `[ENV: production]` __in(__`srcFiles`__) -> `bundle()` -> out(__`bundleDir`__)__
 -   *`bundle:watch`* - `[ENV: development]` __in(__`srcFiles`__) -> watch(__*`bundle()`*__)__

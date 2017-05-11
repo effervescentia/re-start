@@ -1,4 +1,5 @@
 import build from './commands/build';
+import postBuild from './commands/post-build';
 import bundle from './commands/bundle';
 import testBuild from './commands/test-build';
 import dev from './commands/dev';
@@ -28,6 +29,7 @@ export const ES6 = {
   ...ES5,
   ...{
     build,
+    postBuild,
     dev
   }
 };

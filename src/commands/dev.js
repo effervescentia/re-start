@@ -13,6 +13,7 @@ export default (commands, opts) => () => commands.start(
     files(file),
     read(),
     opts.compile(opts.compileOpts),
-    write(opts.outDir)
+    write(opts.outDir),
+    commands.postBuild
   ))
 );
