@@ -28,27 +28,27 @@ export const ES5 = {
 
 export const ES6 = {
   ...ES5,
-  ...{
-    outDir: 'dist/',
 
-    compile: babel
-  }
+  copyFiles: [],
+  copyDir: 'dist/',
+  outDir: 'dist/',
+
+  compile: babel
 };
 
 export const TYPESCRIPT = {
   ...ES6,
-  ...{
-    srcFiles: 'src/index.ts',
-    testFiles: 'test/**/*.ts',
-    watchFiles: 'src/**/*.ts',
-    lintFiles: ['src/**/*.ts', 'test/**/*.ts'],
-    testWatchFiles: ['src/**/*.ts', 'test/**/*.ts'],
-    scratchDir: '.scratch/',
-    scratchTestFiles: '.scratch/test/**/*.js',
-    coverageFiles: '.scratch/src/**/*.js',
 
-    testCompileOpts: { compilerOptions: { sourceMap: false, declaration: false } },
+  srcFiles: 'src/index.ts',
+  testFiles: 'test/**/*.ts',
+  watchFiles: 'src/**/*.ts',
+  lintFiles: ['src/**/*.ts', 'test/**/*.ts'],
+  testWatchFiles: ['src/**/*.ts', 'test/**/*.ts'],
+  scratchDir: '.scratch/',
+  scratchTestFiles: '.scratch/test/**/*.js',
+  coverageFiles: '.scratch/src/**/*.js',
 
-    compile: typescript
-  }
+  testCompileOpts: { compilerOptions: { sourceMap: false, declaration: false } },
+
+  compile: typescript
 };
