@@ -3,9 +3,10 @@ import files from 'start-files';
 import read from 'start-read';
 import watch from 'start-watch';
 import write from 'start-write';
-import { DEV_ENV } from '../utils';
+import { DEV_ENV, command } from '../utils';
 
-export default (commands, opts) => () => commands.start(
+export default (commands, rawOpts) =>
+command((opts) => commands.start(
   DEV_ENV,
   files(opts.outDir),
   clean(),
@@ -16,4 +17,4 @@ export default (commands, opts) => () => commands.start(
     write(opts.outDir),
     commands.postBuild
   ))
-);
+), rawOpts);

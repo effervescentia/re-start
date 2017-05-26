@@ -2,9 +2,10 @@ import clean from 'start-clean';
 import files from 'start-files';
 import read from 'start-read';
 import write from 'start-write';
-import { PROD_ENV } from '../utils';
+import { PROD_ENV, command } from '../utils';
 
-export default (commands, opts) => () => commands.start(
+export default (commands, rawOpts) =>
+command((opts) => commands.start(
   PROD_ENV,
   files(opts.outDir),
   clean(),
@@ -13,4 +14,4 @@ export default (commands, opts) => () => commands.start(
   opts.compile(opts.compileOpts),
   write(opts.outDir),
   commands.postBuild
-);
+), rawOpts);

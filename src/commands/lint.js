@@ -1,11 +1,12 @@
 import files from 'start-files';
-import { rayify, TEST_ENV } from '../utils';
+import { command, rayify, TEST_ENV } from '../utils';
 
-const configurable = (commands, opts) => () => commands.start(
-  TEST_ENV,
-  files(opts.lintFiles || [...rayify(opts.srcFiles), ...rayify(opts.testFiles)]),
-  opts.lint(opts.lintOpts)
-);
+const configurable = (commands, rawOpts) =>
+  command((opts) => commands.start(
+    TEST_ENV,
+    files(opts.lintFiles || [...rayify(opts.srcFiles), ...rayify(opts.testFiles)]),
+    opts.lint(opts.lintOpts)
+  ), rawOpts);
 
 export default configurable;
 

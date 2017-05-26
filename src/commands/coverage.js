@@ -1,8 +1,9 @@
 import clean from 'start-clean';
 import files from 'start-files';
-import { TEST_ENV, optify } from '../utils';
+import { TEST_ENV, command, optify } from '../utils';
 
-export default (commands, opts) => () => commands.start(
+export default (commands, rawOpts) =>
+command((opts) => commands.start(
   TEST_ENV,
   files(opts.reportDir),
   clean(),
@@ -11,4 +12,4 @@ export default (commands, opts) => () => commands.start(
   opts.instrument(opts.instrumentOpts),
   commands.test,
   opts.report(opts.reportOpts)
-);
+), rawOpts);

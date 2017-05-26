@@ -136,6 +136,11 @@ or put the configuration in your `package.json`
 }
 ```
 
+or pass your configuration with your command
+
+`npm start build -- -- --lintOpts semistandard`
+
+
 ### Hijack a command
 
 Want to override a single command without having to repeat existing depending workflows?

@@ -1,6 +1,7 @@
 /* eslint-disable no-confusing-arrow,no-ternary */
 import Start from 'start';
 import env from 'start-env';
+import minimist from 'minimist';
 import { config } from './config'; // eslint-disable-line import/named
 
 export const TEST_ENV = env('NODE_ENV', 'test');
@@ -37,3 +38,6 @@ export const createPreset = (commands, defaults) => {
     return preset;
   };
 };
+
+export const command = (rawCommand, rawOpts) => (...args) =>
+  rawCommand({ ...rawOpts, ...minimist(args) });
