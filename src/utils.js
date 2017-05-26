@@ -1,4 +1,4 @@
-/* eslint-disable no-confusing-arrow,no-ternary */
+/* eslint-disable no-confusing-arrow,no-ternary,no-magic-numbers */
 import Start from 'start';
 import env from 'start-env';
 import minimist from 'minimist';
@@ -11,6 +11,12 @@ export const DEV_ENV = env('NODE_ENV', 'development');
 export const rayify = (items) => Array.isArray(items) ? items : [items];
 
 export const optify = (obj) => obj ? [obj] : [];
+
+export const wrapCommand = (command, commands, rawOpts) => (...args) =>
+  command(commands, {
+    ...rawOpts,
+    ...((args.length !== 0 && typeof args[0] === 'object') ? args[0] : minimist(args))
+  });
 
 export const createPreset = (commands, defaults) => {
   return (startOrOpts = {}, maybeOpts = {}) => {
@@ -32,12 +38,9 @@ export const createPreset = (commands, defaults) => {
     /* beautify preserve:start */
     Object.assign(preset, Object.keys(commands)
       .reduce((configured, key) =>
-        Object.assign(configured, { [key]: commands[key](preset, opts) }), {}));
+        Object.assign(configured, { [key]: wrapCommand(commands[key], preset, opts) }), {}));
     /* beautify preserve:end */
 
     return preset;
   };
 };
-
-export const command = (rawCommand, rawOpts) => (...args) =>
-  rawCommand({ ...rawOpts, ...minimist(args) });

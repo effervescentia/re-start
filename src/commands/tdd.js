@@ -1,7 +1,12 @@
 import watch from 'start-watch';
-import { command, rayify } from '../utils';
+import inputConnector from 'start-input-connector';
+import { rayify } from '../utils';
 
-export default (commands, rawOpts) =>
-command((opts) => commands.start(
-  watch(opts.testWatchFiles || [...rayify(opts.srcFiles), ...rayify(opts.testFiles)])(commands.test)
-), rawOpts);
+export default (commands, opts) =>
+commands.start(
+  watch(opts.testWatchFiles || [...rayify(opts.srcFiles), ...rayify(opts.testFiles)])(() =>
+    commands.start(
+      inputConnector(opts),
+      commands.test
+    ))
+);

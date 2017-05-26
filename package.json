@@ -24,6 +24,7 @@
     "start-env": "^3.0.0",
     "start-eslint": "^3.0.1",
     "start-files": "^2.0.0",
+    "start-input-connector": "^0.2.0",
     "start-istanbul": "^3.0.0",
     "start-mocha": "^3.0.0",
     "start-pretty-reporter": "^0.3.0",

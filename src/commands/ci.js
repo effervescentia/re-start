@@ -1,8 +1,10 @@
-import { command } from '../utils';
+import inputConnector from 'start-input-connector';
 
-export default (commands, rawOpts) =>
-command((opts) => commands.start(
+export default (commands, opts) =>
+commands.start(
+  inputConnector(opts),
   commands.lint,
+  inputConnector(opts),
   commands.coverage,
   ...opts.reporters.reduce((tasks, reporter) => tasks.concat(...reporter(commands, opts)), [])
-), rawOpts);
+);

@@ -1,4 +1,8 @@
-export default (commands) => () => commands.start(
+import inputConnector from 'start-input-connector';
+
+export default (commands, opts) => commands.start(
+  inputConnector(opts),
   commands.lint,
+  inputConnector(opts),
   commands.coverage
 );

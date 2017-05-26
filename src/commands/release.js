@@ -1,8 +1,8 @@
 import release from 'start-release';
-import { command, PROD_ENV } from '../utils';
+import { PROD_ENV } from '../utils';
 
-export default (commands, rawOpts) =>
-command((opts) => commands.start(
+export default (commands, opts) =>
+commands.start(
   PROD_ENV,
   release(opts.releaseOpts || {})
-), rawOpts);
+);

@@ -3,10 +3,11 @@ import files from 'start-files';
 import read from 'start-read';
 import watch from 'start-watch';
 import write from 'start-write';
-import { DEV_ENV, command } from '../utils';
+import inputConnector from 'start-input-connector';
+import { DEV_ENV } from '../utils';
 
-export default (commands, rawOpts) =>
-command((opts) => commands.start(
+export default (commands, opts) =>
+commands.start(
   DEV_ENV,
   files(opts.outDir),
   clean(),
@@ -15,6 +16,7 @@ command((opts) => commands.start(
     read(),
     opts.compile(opts.compileOpts),
     write(opts.outDir),
+    inputConnector(opts),
     commands.postBuild
   ))
-), rawOpts);
+);

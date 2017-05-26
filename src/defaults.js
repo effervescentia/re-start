@@ -30,7 +30,7 @@ export const ES6 = {
   ...ES5,
 
   copyFiles: [],
-  copyDir: 'dist/',
+  copyDir: '',
   outDir: 'dist/',
 
   compile: babel
