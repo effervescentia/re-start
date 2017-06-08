@@ -48,7 +48,13 @@ export const TYPESCRIPT = {
   scratchTestFiles: '.scratch/test/**/*.js',
   coverageFiles: '.scratch/src/**/*.js',
 
-  testCompileOpts: { compilerOptions: { sourceMap: false, declaration: false } },
+  testCompileOpts: {
+    compilerOptions: {
+      sourceMap: false,
+      inlineSourceMap: true,
+      declaration: false
+    }
+  },
 
   compile: typescript
 };
