@@ -16,6 +16,7 @@ export const ES5 = {
 
   instrumentOpts: { esModules: true },
   reportOpts: ['lcovonly', 'html', 'text-summary'],
+  bundleWatchOpts: { persistent: true, awaitWriteFinish: true },
 
   bundle: webpack,
   reporter: prettyReporter,
