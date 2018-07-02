@@ -34,7 +34,8 @@
     "start-typescript": "^1.3.10",
     "start-watch": "^3.0.0",
     "start-webpack": "^0.2.0",
-    "start-write": "^2.0.2"
+    "start-write": "^2.0.2",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -50,7 +51,9 @@
   "scripts": {
     "start": "start-runner -f src/",
     "prepush": "yarn start lint",
-    "prepublish": "yarn start build"
+    "prepublish": "yarn start build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "release": {
     "verifyConditions": "condition-circle"
@@ -70,5 +73,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "snyk": true
 }
