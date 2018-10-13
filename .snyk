@@ -1,0 +1,25 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > request > hawk > hoek:
+        patched: '2018-10-13T01:20:59.285Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > request > hawk > boom > hoek:
+        patched: '2018-10-13T01:20:59.285Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > request > hawk > sntp > hoek:
+        patched: '2018-10-13T01:20:59.285Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > hawk > hoek:
+        patched: '2018-10-13T01:20:59.285Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-10-13T01:20:59.285Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > hawk > sntp > hoek:
+        patched: '2018-10-13T01:20:59.285Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > hawk > boom > hoek:
+        patched: '2018-10-13T01:20:59.285Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-10-13T01:20:59.285Z'
+  'npm:tunnel-agent:20170305':
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > tunnel-agent:
+        patched: '2018-10-13T01:20:59.285Z'
