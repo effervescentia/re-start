@@ -15,7 +15,7 @@
   ],
   "main": "dist/index.js",
   "dependencies": {
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "start": "^5.0.0",
     "start-babel": "^3.0.0",
     "start-clean": "^2.0.0",
