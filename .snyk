@@ -1,0 +1,120 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - start-babel > babel-core > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-eslint > eslint > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-release > semantic-release > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-generator > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-generator > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-template > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-template > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-eslint > eslint > inquirer > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-eslint > eslint > table > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > async > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-webpack > webpack > async > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-generator > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-generator > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-template > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-template > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-generator > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-template > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-template > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-codecov > codecov-lite > request-promise-native > request-promise-core > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-webpack > webpack > watchpack > async > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-generator > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-lib-instrument > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-template > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-generator > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-template > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-template > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-generator > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-istanbul > istanbul-api > istanbul-lib-instrument > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-template > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > request-promise > request-promise-core > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-babel > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
+    - start-release > semantic-release > @semantic-release/condition-travis > travis-deploy-once > travis-ci > request > form-data > async > lodash:
+        patched: '2020-04-30T22:59:52.464Z'
