@@ -22,7 +22,7 @@
     "start-codecov": "^2.0.0",
     "start-copy": "^0.2.0",
     "start-env": "^3.0.0",
-    "start-eslint": "^3.0.1",
+    "start-eslint": "^4.0.0",
     "start-files": "^2.0.0",
     "start-input-connector": "^0.2.0",
     "start-istanbul": "^3.0.0",
@@ -33,7 +33,7 @@
     "start-split": "^1.1.0",
     "start-typescript": "^1.3.10",
     "start-watch": "^3.0.0",
-    "start-webpack": "^0.2.0",
+    "start-webpack": "^0.3.0",
     "start-write": "^2.0.2"
   },
   "devDependencies": {
