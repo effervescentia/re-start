@@ -22,7 +22,7 @@
     "start-codecov": "^2.0.0",
     "start-copy": "^0.2.0",
     "start-env": "^3.0.0",
-    "start-eslint": "^3.0.1",
+    "start-eslint": "^4.0.0",
     "start-files": "^2.0.0",
     "start-input-connector": "^0.2.0",
     "start-istanbul": "^3.0.0",
